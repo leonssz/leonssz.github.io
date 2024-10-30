@@ -2,88 +2,252 @@
 <html lang="cs">
 <head>
     <meta charset="utf-8">
-    <title>Schizo Task Force</title>
+    <title>private koutek</title>
     <style>
-        h1.stftitle {
-            text-align: center;
-            color: red;
-            font-family: monospace;
-            font-size: 300%;
-        }
-
-        p.prosmeet {
-            text-align: center;
-            text-shadow: 2px 1px 1px red;
-            font-family: 'Courier New';
-            font-size: 100%;
-        }
-
         body {
-            background-color: black;
-            background-image: url("STFLogo-modified.png");
-            background-repeat: no-repeat;
-            background-position: right top 10px;
-            background-position-x: 170vh;
-            background-size: 16vh 8vw;
-        }
-
-        h1.nameofplayer {
-            flex: 1;
-            text-align: center;
-            color: limegreen;
-            font-family: 'Leelawadee UI';
-            font-size: 24px;
-        }
-
-        h1.joel:hover {
-            text-shadow: 2px 5px 3px white;
-        }
-
-        .header-container1, .header-container2, .header-container3 {
-            display: flex;
-            justify-content: space-between;
+            background-color: grey;
+            justify-content: center;
             align-items: center;
-            text-align: center;
-            width: 75%;
-            padding: 45px 150px;
-            margin-bottom: 250px;
         }
 
-        img.joel {
-            width: auto;
-            height: 25vh;
-            position: absolute;
-            left: 240px;
-            top: 250px;
+        nav {
+            background-color: rgba(20, 20, 20, .45);
+            position: relative;
+            left: 32%;
+            width: 35%;
+            height: 5%;
+            text-align: center;
+        }
+
+        .navbutton {
+            color: white;
+            margin: 0vh 1vw 0vh 1vw;
+            text-decoration: none;
+            font-family: 'Agency FB';
+            font-size: 22px;
+            text-align: center;
+            vertical-align: middle;
+            display: inline-block;
+            font-weight: bold;
+            transition-duration: 0.35s;
+        }
+
+        .navbutton3 {
+            color: white;
+            text-decoration: none;
+            font-family: 'Agency FB';
+            font-size: 22px;
+            text-align: center;
+            vertical-align: middle;
+            display: inline-block;
+            font-weight: bold;
+            transition-duration: 0.35s;
+        }
+
+        .navbutton2 {
+            color: white;
+            margin: 0vh 2vw 0vh 2vw;
+            padding: 10px 0px;
+            text-decoration: none;
+            font-family: 'Agency FB';
+            font-size: 22px;
+            text-align: center;
+            vertical-align: middle;
+            display: inline-block;
+            font-weight: bold;
+            transition-duration: 0.35s;
+        }
+
+        .navbutton:hover, .navbutton3:hover {
+            color: black;
+            font-family: 'Agency FB';
+            text-underline-offset: 8px;
+            text-decoration: underline;
+            text-shadow: 1px -1px 3px grey;
+            transform: scaleX(1.15);
             transition-duration: 0.25s;
         }
 
-            img.joel:hover {
-                width: auto;
-                height: 30vh;
-                transition-duration: 0.5s;
+        .navbutton2:hover span {
+            display: none;
+            transition-duration: 0.35s;
+        }
+
+        .navbutton2:hover:before {
+            content: "serialy, filmy";
+        }
+
+        .navbutton2:hover {
+            color: black;
+            font-family: 'Agency FB';
+            text-underline-offset: 8px;
+            text-decoration: underline;
+            text-shadow: 1px -1px 3px grey;
+            transform: scaleX(1.15);
+            transition-duration: 0.25s;
+        }
+
+        .popiskyleto, .popiskyjaro, .popiskypodzim, .popiskyzima {
+            background-color: transparent;
+            color: white;
+            font-family: 'Lucida Console';
+            font-size: 24px;
+            padding: 10px;
+            margin-top: 26px;
+            display: block;
+            margin-left: -120px;
+            border: none;
+            transition-duration: 0.25s;
+        }
+
+            .popiskyleto:hover, .popiskyjaro:hover, .popiskypodzim:hover, .popiskyzima:hover {
+                text-underline-offset: 8px;
+                text-decoration: underline;
+                text-shadow: 1px -1px 3px grey;
+                transition-duration: 0.1s;
+                cursor: pointer;
             }
+
+            .popisky:active {
+                color: cyan;
+            }
+
+        .navbutton, .navbutton2, .navbutton3 {
+            margin: 0px 25px 0px 25px;
+        }
+
+        .content-container {
+            width: 80%; 
+            height: 1000px;
+            max-width: 1200px; 
+            margin: auto;
+            padding: 200px;
+            background-color: rgba(255, 255, 255, .89); 
+            box-shadow: -2px 15px 20px 15px rgba(0, 0, 0, 0.25); 
+            border-radius: 8px;
+        }
+        .popiskyleto:hover {
+            color: #f4f965;
+        }
+        .popiskyjaro:hover {
+            color: #91f857;
+        }
+        .popiskypodzim:hover {
+            color: #cb4a11;
+        }
+        .popiskyzima:hover {
+            color: #11a2e5;
+        }
+        .inforozvrh {
+            color: white;
+            font-family: 'Cascadia Mono';
+            font-size: 18px;
+            margin-top: -10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .skolnirok{
+            color: white;
+            font-family: 'Cascadia Mono';
+            font-size: 36px;
+            margin-top: -80px;
+            text-align: center;
+            vertical-align: middle;
+
+        }
+        .hermesice{
+            font-family: 'Century Gothic';
+            color: black;
+            font-size: 30px;
+        }
+
+        .dny{
+            color: black;
+            background-color: transparent;
+            border: none;
+            font-size: 14px;
+            padding: 2px 5px 20px 3px;
+            text-align: center;
+            vertical-align: middle;
+            display: inline-grid;
+        }
+            .dny:hover {
+                cursor: pointer;
+                color: #cb4a11;
+            }
+        .serial{
+            background-color: black;
+            color: white;
+            width: 220px;
+            border-radius: 15px;
+            font-family: 'Franklin Gothic Book';
+            font-size: 16pt;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .serial:hover{
+            background-color: rgba(64, 64, 64, 200);
+        }
+        .daryls2, .daryls1 {
+            background-color: red;
+            background-color: black;
+            color: white;
+            width: 100px;
+            border-radius: 15px;
+            font-family: 'Franklin Gothic Book';
+            font-size: 16pt;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .ds1, .ds2{
+            width: 50px;
+            height: 40px;
+            margin: 3px;
+        }
+        #ds1{
+            position: relative;
+            top: -150px;
+            left: 350px;
+        }
+        #ds2{
+            position: relative;
+            top: -246px;
+            left: 720px;
+        }
     </style>
 </head>
-
 <body>
-    <h1 class="stftitle">Schizo Task Force.</h1>
-    <p class="prosmeet">Where all the pros meet.</p>
-    <div class="header-container1">
-        <h1 class="nameofplayer">JOEL</h1>
-        <h1 class="nameofplayer">LEONS</h1>
-        <h1 class="nameofplayer">WRINKLE</h1>
+    <nav>
+        <a href="" class="navbutton3">tbd</a>
+        <a href="" class="navbutton">tbd</a>
+        <a href="" class="navbutton">tbd</a>
+        <a href="" class="navbutton2"><span>private koutek </span> </a>
+    </nav>
+    <div class="content-container">
+        <button class="serial">Daryl Dixon (Book of Carol)</button>
+    <div id="ds1">
+        <p>1. SEZONA:</p>
+        <button class="ds1" onclick=""> E1</button>
+        <button class="ds1" onclick=""> E2</button>
+        <button class="ds1" onclick=""> E3</button>
+        <button class="ds1" onclick=""> E4</button>
+        <button class="ds1" onclick=""> E5</button>
+        <button class="ds1" onclick=""> E6</button>
     </div>
-    <p><img src="joel.png" alt="joel image" class="joel"/></p>
-    <div class="header-container2">
-        <h1 class="nameofplayer">NIHILUS</h1>
-        <h1 class="nameofplayer">KAPA</h1>
-        <h1 class="nameofplayer">DAWNEZ</h1>
+    <div id="ds2">
+        <p>2. SEZONA:</p>
+        <button class="ds2" onclick=""> E1</button>
+        <button class="ds2" onclick=""> E2</button>
+        <button class="ds2" onclick=""> E3</button>
+        <button class="ds2" onclick=""> E4</button>
+        <button class="ds2" onclick=""> E5</button>
+        <button class="ds2" onclick=""> E6</button>
     </div>
-    <div class="header-container3">
-        <h1 class="nameofplayer">PIKENO</h1>
-        <h1 class="nameofplayer">VIOXINI</h1>
-        <h1 class="nameofplayer">SNAKE</h1>
+    <iframe name="kukframe" id="kukframe" src="https://5ey30e5a5k.kukaj.me/iframe/5ec66e55-0d31-46bf-9a93-4c1b102657d0?ww=M3mVC3LVmOTRHPOzwd9dCw%253D%253D&amp;w=N1dyaWwvQWFLUlhPMEQ3Y0xEVDdhQ1cwVFBIWUl5QWgzRk1tWjQ5WGd3Y2hpNU9pZ1BUYzdtTXNERmg5eldYeXJsUVZsZWJ4VUZoSGdWandIOTJ0bVk3U2JsR0Z1NGxITHBWcHpHOUVDTXJTRnlrN09GZG00M2YybjNGa3lkWG4yTm1JWnhINk9FVlJlalEyaFlDT1ArbWJsY2NTU2t0VUY0b1RTSWZFditUOVVJbUlySE1XNTdCQVZBYnZGNnZGS1l1WkhQVlRydjBzRUJGSXA3Q0srbk5Xc1o1NUwyMGUyMFFBaGhGTjlXQVJzU0R5Szl5aG1FL3Y0dE1pS0FyQjNxL0VTazRIMUdKOGlORUNPSnk0bHQreUtCNzdnUWI3UU82aDJTL09sY1ZaNkV6Ym5EakR1MHlCN1cweVh0MkZmZHNvOXJRSm5iejJUWjRmNmxTYUFab3QvL2dJWHhzM2d0NXg4TzNMd0hyMGx3VTJLbndJeGFNVC8zdWNpWEhNekdrTUdDS2o2T0YzSnYyMXNLdGVFT1R2RjE0M1ZOMlEvR05DcEpMdkFuMzRoTzFUeXpkTmI3OTV1TjFFY3huQnVCL1lHdlZLT2xrV3Y2UTlBb2JxU2cySzNVcitHYlV3MUNmaGgwWnZpL3V3ZGdHdWQ5OUlVdHlOK3RtRG0vYk1hTHFiR3l0Znpnak1PcjA3dTlQQS9yM3VHVnBJOFMwQ0tNemV3T2VIandzaDdwaWx4UTBDRk9BOHVhVUtuZ0pWQ1VCTU8vT01QU3c1UlczakZJWVR4eWJuUEgrNVJFRnJXZXhxQk5wRWFadmhFeU95VkZ5TGNkRFIxVUttbHlaWEJ3NGNQOXYvMm1PZStoT2s1dktybzkxejd2b3FVd1RNcGNBT1ozcFU4VWZrTHVnWGxyK3RxUjNHLytjRk1iTUQzQWQwNkEvVndyRnA2VEF5SnljZTlYbVhIbi9zbVlsbkxQWXliaEtBbitzU1BSTHpMRUVKWm1JWDNBVUpYY01zbnBhQTh1a1htZE53d0NEcFJZa1VGWlF6NGQ1UVRMME03NHp0KzRPTlBsbjNSZjhHeWlwY1dnSXJKdjlJTHZjaEhYbmFzSVJ0cjcxeEJmK1dBd0hnRU12SC9xZExnSldQTXdRRlAxK3F3bzVqWE1IRDBMQzNrVHlGY3psWVp1SGhqd0orUFQ0R1cvTUx2RWY1TmtHLy85bDlQT3pjTkc1TXpxbEFHZjhHU2xDWUVDM1dzZHpnVEFqV2lPRlk2cklySS9wbkxKNXdpbUl6cUpVQm5qeFYyOVNJeXd1SVBPMGtmTjh6ZXh0UTNyMitPZUxReHkwSDNQUmQydkdFQmhYeUgyLzZNV0x3NHZOZ3oxaHA2blpFSW8ySDdLak85R3lzODRwQVRrMVdMaXNMckVGMW9DOGtrZ2xXdnJUQ1RxNG8zb3ZpN0k3MUN2eUsvdW1xdXFra213OFM5ZlRZZHRUUkNMM0Z1MUNTbmVLWHZPcUZ3a0lmNnVLdzJkZWJkeFRPaDFPVkdWVk5WdE9LdlVZSFJFU2dZKzV3N1gva3VETXFkVGNBVlZUZDNnQ0VONjJhY2xlSWRTRllRVVRQakM0eGlhQzVOUlBpbjBiZ3o2RVI3a3dXMTJDYXhQSzBQaFlNRE0xbzRycXZ3R3kvTk5MRUw1YkR3SnZtQ2hGY3c5S0FJaTVWaXltQkw0akRNWFFaalMxcXorbyt1eHNsMmFJVERkZ3NFVlIzaW1ub3h0TXdUK2IwOGJJZUZhR242NUI2V1oxYWVnMVdWWkRIM3JtdXExVC9TSnRXK0lZWFZRWTV0UjBhc3hzOFlHelRDelQzMkxlMmRkS0hEN0xRY2RFUUYxbzNjTnlvOWNzdjlTOEZaK0RJVGVjejB1V0xDVXhLVWRONWZrMllCRDZBT2ExUHJnN0VaM3lvRHlvY2FyR2pacXBIQWJXSXlWa3hqTVRuY3haRUV3PT0%253D" data-kuk="eyJpNmZrdWd0ZGx1IjoiYUhSMGNITTZMeTgxWlhrek1HVTFZVFZyTG10MWEyRnFMbTFsTDJsbWNtRnRaUzgxWldNMk5tVTFOUzB3WkRNeExUUTJZbVl0T1dFNU15MDBZekZpTVRBeU5qVTNaREFcL2QzYzlUVE50VmtNelRGWnRUMVJTU0ZCUGVuZGtPV1JEZHlVeU5UTkVKVEkxTTBRbWR6MU9NV1I1WVZkM2RsRlhSa3hWYkdoUVRVVlJNMWt3ZUVWV1JHUm9VVEZqZDFaR1FrbFhWV3cxVVZkbmVsSnJNWFJYYWxFMVYwZGtNMWt5YUhCT1ZUbHdXakZDVlZsNlpIUlVXRTVGVW0xbk5XVnNaRmxsV0VwelZWWmFjMXBYU2pSV1ZWcHZVMGRrVjJGdVpFbFBWRW93WWxack0xVXlTbk5TTUZveFRrZDRTVlJJUWxkalNIQklUMVZXUkZSWVNsUlNibXh5VGpBNVIxcEhNREJOTWxsNVltcE9SMkV6Ykd0WFJ6UjVWRzB4U2xkdWFFbE9hemxHVm14S2JHRnNSWGxoUm14RVZERkJjbUpYU25OWk1rNVVWVEowTUZaVldUQmlNVkpVVTFkYVJtUnBkRlZQVmxaS1lsVnNlVk5GTVZoT1ZHUkRVVlphUWxsdVdrZE9ibHBIVXpGc01WZHJhRkZXYkZKNVpHcENlbEpWU2tkVFdFRXpVVEJ6Y21Kck5WaGpNVzh4VGxWM2VVMUhWWGxOUmtaQ1lVZG9SMVJxYkZoUlZrcDZWVEJTTlZONmJEVmhSekZHVEROWk1HUkZNWEJUTUVaNVVXcE9lRXd3VmxSaGVsSkpUVlZrUzA5SGJFOVNWVTVRVTI1ck1HSklVWEpsVlhSRFRucGtibFZYU1ROVlZUZ3lZVVJLVkV3d09YTlpNVnBoVG10V05sbHROVVZoYTFJeFRVaHNRMDR4WTNkbFZtZ3dUV3RhYlZwSVRuWlBXRXBTVTIwMWFXVnFTbFZYYWxKdFRtMTRWRmxWUm1GaU0xRjJUREprU2xkSWFIcE5NbVF3VGxobk5GUjZUazFrTUdoNVRVZDRNMVpVU2t4aWJtUktaVWRHVGxaRE9IcGtWMDV3VjBWb1RtVnJaSEpVVldSRVV6SnZNbFF3V1hwVGJsbDVUVmhPVEdSSFZrWlVNVkl5VW1wRk1FMHhXazlOYkVWMlVqQTFSR05GY0Uxa2EwWjFUWHBTYjFSNlJsVmxXSEJyVkcxSk0wOVVWakZVYWtaR1dUTm9kVkZ1VmtOTU1XeElaR3hhVEZReWVISldNMWt5VlZSc1FtSXlTbmhWTW1ONVUzcE9WbU5wZEVoWmJGWXpUVlZPYldGSFozZFhibHB3VEROV00xcEhaRWhrVjFFMVQxVnNWbVJJYkU5TE0xSjBVa2N3ZGxsck1XaFVTRVpwVWpOc01GcHVjRzVoYXpGUVkycEJNMlJVYkZGUlV6bDVUVE5XU0ZadVFrcFBSazEzVVRCMFRtVnRWak5VTWxaSllXNWtlbUZFWkhkaFYzZzBWVlJDUkZKck9VSlBTRlpvVmxWMGRWb3djRmRSTVZaRFZGVTRkbFF3TVZGVk0yTXhWV3hqZW1GcldrcFhWbEkwWlZkS2RWVkZaM0pPVmtwR1VtNUtXRnBZYUhoUmF6VjNVbGRHWVdSdGFFWmxWVGsxVm10YU5WUkhUbXRTUmtsNFZsVjBkR0pJYkdGWFJVb3pUa2RPVVU5WVdYWk5iVEZRV2xOMGIxUXljekZrYTNSNVlucHJlR1ZxWkRKaU0wWldaREZTVG1OSFRrSlVNVzk2WTBaVk5GWlhXbkpVU0ZadVYwZDRlVXN6VW5oVmFrNUlUSGwwYWxKck1XbFVWVkY2VVZkUmQwNXJSWFpXYm1SNVVtNUJNbFpGUmpWVGJteHFXbFJzV1dKV2FFbGlhVGw2WWxac2MySnJlRkZYV0d4cFlVVjBRbUpwZEhwVk1VSlRWRWh3VFZKVlZrdFhiVEZLVjBST1FsWlZjRmxaTURGNlltNUNhRkZVYURGaE1XaDBXa1UxTTJRd1RrVmpSa3BhWVRGV1IxZHNSalpPUjFFeFZWWlNUVTFGTUROT1NIQXdTM3BTVUZSc1FuTmlhazVUV21wb1NHVlhiSGRaTVdSdVUxaEtTMlJxYkVwVVNGcHFZVVZvV1dKdFJucFRWa293WTJwamVHVkZTbTFMTVdSQ1pEQm9ibEpWTVRKVFF6bDRXa1Y0YmxOc1pGRlVXR1JTVW14QmVFc3pSak5pZWxaeFYwVXhTVkpFUWsxUmVrNXlWa2hzUjFremNITlhWbkF4VTBkb2NXUXdiM0pWUmxFd1VqRmpkbFJWZURKU1Yxa3hWRzEwU0V4NU9EVmlSR3hSVkROd2FsUnJZekZVV0hCNFlrVkdTRnBxYUVoVk1uaEVWMVZXUkUweFpIcGFTSEJ1VmtWR2NWWXliRkJTYkdzeVkydHNlVk5UT1hkaWEzaExUbGhrY0dKVmJEWmpWWEJXVVcwMWNXVkdXWGxQVms1S1pWaGtNVk5XUWxCTlIzUnRWR3BvTmxwWWFEQlZWRTU1VFdsMFVGcFZlRkpsU0d0M1UwUk9VVlZ0VVhsa2EyUkdVVzFvV1dWVlozbE1lbHBPVmpCNE0wNUlXazlhTTI5NFlVaEJNbUpzY0VaVFZ6aDVVMFJrVEdGck9EVlNNMng2VDBSU2QxRldVbkpOVm1STllWaE9UV05yVmtkTlZ6bEVUMGQwY2xveWVGaGtia3BWVVRGU2VFNUhPSHBpTTFwd1RqQnJNMDFWVGpKbFZYTjJaRmN4ZUdSWVJuSmhNakV6VDBaTk5WcHNVbHBhU0ZKVlZXdE9UVTB3V2pGTlZVNVVZbTFXVEZkSVdsQmpWVm96WVRCc2JVNXVWa3hrZWtwcldsZEthMlZHVWxCaFJFWlFWbXRrVjFack5WZGtSVGxNWkd4V1dsTkdTa1pWTW1SYVMzcFdNMDR4WjNaaE0xWkZWRmhHYTFaSFRrSldiRnBWV2tST2JsRXdWazlPYWtwb1dUSjRiRk5YVWxSU2JHeFNWbFpTVVdGclRUQmxSMnhvVVhwV1QxVnNRbkJpYWtKcFdqTnZNbEpXU1ROaE0yUllUVlJLUkZsWWFGRlRla0pSWVVac1RsSkZNSGhpZWxKNVkxaGFNMUl6YTNaVWF6Vk5VbFYzTVZsclVqTlRibHAwVVRKb1Ixa3pZelZUTUVaS1lWUldWMkZZYkhSUmEzY3dZV3RTVGxkR1JtRmhiRTE0WTFodmNtSjVkREZsU0U1elRXMUdTbFpGVW10YU0wNUdWbXhKZW1GWE1YVmlNMmd3VkZoa1ZVc3lTWGRQUjBwS1dsVmFhRkl5TkRKT1ZVa3lWakZ2ZUZsWFZtNU5WbVJYVjJ0U1NVMHpTblJrV0VWNFZrTTVWRk51VWxoTE1HeGFWMFphVWxkVVZqQlZha0pvWXpOb2VrOUdiRWhsYkZKRVpXeFJlazFyZUd4TmJWSnJVekJvUlU0d2VGSlpNbEpHVlZWWmVHSjZUbXBVYm14MlQxZE9lbVJxYkZSUFJWcGhTekJTU2xaSFZtcGxha0l4VmpCNFJGWllhRXhXVjFKUFRsZGFjazFzYkVOU1JGcENWREpGZUZWSVNtNU9NRlpoVFROc2RsSkliSFpaTWtaNVVqSndZV05ZUWtsUlYwcFlVMWhzVjJFemFIRlVWbEoxV1ROb1lWSlZWak5RVkRBbE1qVXpSQT09Iiwidm4ycWt5OGs2NCI6InhEUDMwZ203U3NHbmprc3F4dXR6TGFwTFkrZ0xcLzlOU05qbzI1Y2VaM3RRNzNjZnZuUURKMm1RZ3hiaWdySGVZIiwiZXU5dXM2Z2tiNyI6IjNiNDNkNzY5MTNiOTE2NTRkOWZmZWJiZWM0ZDJmM2E1IiwicGpvenN5dHpuciI6IjQ5M2Y2OTJkNzRmMTE5OWE2ODkwOTVkM2UwZWEzN2ZhNmMyNjVkMmRmNDJiZDU2MDdlMTFjN2RiZTIwMGM2OTU5YzdhODU1YzgxZWJmNGQ3YTcwNmUzZDU4NTgzNzZmYTRjIn0=" scrolling="no" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" onload="preload();"></iframe>
     </div>
+
+    <script>
+
+    </script>
 </body>
 </html>
