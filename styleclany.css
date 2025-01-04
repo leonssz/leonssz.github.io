@@ -112,6 +112,16 @@ body {
     background-color: black;
     margin-left: 0;
 }
+@media (max-width: 1080px){
+    .desc{
+        left: 24%;
+        bottom: 160px;
+    }
+    #clans h1{
+        bottom: 60px;
+        left: 58%;
+    }
+}
 
 @media (max-width: 768px) {
     .desc{
