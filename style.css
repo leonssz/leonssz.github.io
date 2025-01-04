@@ -9,7 +9,7 @@ header, nav, main, footer {
     margin: 0;
 }
 body{
-    margin-left: 0;
+    margin-left: 0px;
     background-color: black;
 }
 
@@ -72,15 +72,17 @@ footer {
         font-size: 13px;
         font-family: "Aldrich", sans-serif;
     }
+
 /* Main content styling */
 .firstpic, .secondpic {
     position: relative;
     width: 100%;
-    height: 80vh; /* Make the image container take up 80% of the viewport height */
-    background-size: cover; /* Ensure the image fills the container */
-    background-position: center center; /* Center the image */
-    background-repeat: no-repeat;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
     font-family: "Aldrich", sans-serif;
+    background-repeat: no-repeat;
+    margin-top: 20px;
 }
 
 .firstpic {
@@ -93,90 +95,80 @@ footer {
 
 #contentfirstpic {
     position: absolute;
-    top: 20%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    color: white;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
     text-align: center;
 }
 
 #title {
-    font-size: 4rem;
+    font-size: 48px;
+    color: white;
     font-weight: bold;
     text-decoration: underline yellow;
-    text-underline-offset: -70px;
+    text-underline-offset: 8px;
 }
 
 #jka {
-    font-size: 1.5rem;
+    font-size: 18px;
     color: grey;
-    margin-top: -30px;
+    margin-top: -20px;
 }
 
 #getmod a {
+    display: inline-block;
+    margin-top: 20px;
     padding: 10px 20px;
-    font-size: 1.5rem;
+    font-size: 18px;
     background-color: #f2ae09;
     color: black;
     text-decoration: none;
     border-radius: 5px;
-    position: relative;
-    top: 300px;
+    transition: background-color 0.3s;
 }
 
     #getmod a:hover {
         background-color: #e59407;
     }
 
-#about {
-    font-size: 2rem;
-    color: white;
-    text-align: center;
-    margin-top: 20px;
+/* Footer styles */
+footer {
+    background-color: black;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#aboutdesc {
-    font-size: 1.2rem;
-    color: white;
-    margin-top: 10px;
-    text-align: center;
-}
+    footer h1 {
+        font-size: 12px;
+        font-family: "Aldrich", sans-serif;
+    }
 
-#iconic {
-    font-weight: bold;
-    color: yellow;
-}
-
-/* Responsive design adjustments */
-@media (max-width: 1081px) {
+/* Responsive Design */
+@media (max-width: 1080px) {
     .firstpic, .secondpic {
-        height: 60vh; /* Smaller image height on medium screens */
+        height: 60vh;
     }
 
     #title {
-        font-size: 2rem;
-        margin-left: 15%;
-        text-underline-offset: -32px;
+        font-size: 28px;
     }
 
     #jka {
-        font-size: 1.5rem;
-        margin-left: 15%;
+        font-size: 16px;
     }
 
-    #about {
-        font-size: 1.5rem;
-    }
-
-    #aboutdesc {
-        font-size: 1rem;
+    #getmod a {
+        font-size: 16px;
+        padding: 8px 16px;
     }
 }
 
 @media (max-width: 768px) {
     nav a {
-        font-size: 0.9rem;
-        padding: 0 2vw;
+        font-size: 14px;
+        padding: 0 15px;
     }
 
     .firstpic, .secondpic {
@@ -184,33 +176,23 @@ footer {
     }
 
     #title {
-        font-size: 1.3rem;
-        text-underline-offset: -17px;
-        margin-right: -10%;
+        font-size: 24px;
     }
 
     #jka {
-        font-size: 1rem;
-        margin-top: -2%;
-        margin-left: 30%;
-    }
-    #getmod a{
-        font-size: 1rem;
+        font-size: 14px;
     }
 
-    #about {
-        font-size: 1.2rem;
-    }
-
-    #aboutdesc {
-        font-size: 0.9rem;
+    #getmod a {
+        font-size: 14px;
+        padding: 8px 12px;
     }
 }
 
 @media (max-width: 480px) {
     nav a {
-        font-size: 0.8rem;
-        padding: 0 2vw;
+        font-size: 12px;
+        padding: 0 10px;
     }
 
     .firstpic, .secondpic {
@@ -218,18 +200,15 @@ footer {
     }
 
     #title {
-        font-size: 1rem;
+        font-size: 20px;
     }
 
     #jka {
-        font-size: 0.9rem;
+        font-size: 12px;
     }
 
-    #about {
-        font-size: 1rem;
-    }
-
-    #aboutdesc {
-        font-size: 0.8rem;
+    #getmod a {
+        font-size: 12px;
+        padding: 6px 10px;
     }
 }
