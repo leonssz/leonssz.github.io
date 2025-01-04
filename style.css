@@ -4,23 +4,16 @@
     font-weight: normal;
     font-style: normal;
 }
-
-/* Reset styles */
-
-body {
-    background-color: black;
-    color: white;
-    font-family: "Aldrich", sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+/* Reset margins for header, nav, main, footer */
+header, nav, main, footer {
+    margin: 0;
+}
+body{
     margin-left: 0;
+    background-color: black;
 }
 
-header, nav, footer {
-    width: 100%;
-}
-
+/* Header styles */
 header {
     background-color: black;
     height: 50px;
@@ -35,13 +28,15 @@ header {
     font-family: 'fight';
     transform: skewX(12deg);
     font-weight: 400;
+    font-style: normal;
 }
 
     #headertitle:hover {
         color: yellow;
-        transition: color 1.8s;
+        transition-duration: 1.8s;
     }
 
+/* Navigation styles */
 nav {
     background-color: black;
     height: 50px;
@@ -52,8 +47,9 @@ nav {
 
     nav a {
         padding: 0 30px;
+        font-family: "Aldrich", sans-serif;
         color: white;
-        text-decoration: none;
+        text-decoration: none; /* Ensures no underline on links */
         font-size: 16pt;
     }
 
@@ -62,84 +58,7 @@ nav {
             text-shadow: 2px 4px 10px #f2ae09b0;
         }
 
-/* Main Section */
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
-}
-
-#title {
-    font-size: 5rem;
-    text-shadow: 10px 10px 20px black;
-    margin: 20px 0;
-    text-decoration: underline yellow;
-    text-underline-offset: -70px;
-    position: relative;
-    top: -1025px;
-    right: 500px;
-}
-
-#jka {
-    font-size: 2rem;
-    color: rgb(200, 200, 200);
-    margin: 20px 0;
-}
-
-#getmod {
-    background-color: black;
-    width: 14em;
-    height: 2.6em;
-    border: 3px solid yellow;
-    text-align: center;
-    border-radius: 10px;
-    margin: 20px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-    #getmod a {
-        color: yellow;
-        font-size: 1.5rem;
-        text-decoration: none;
-        font-family: "Aldrich", sans-serif;
-        display: block; /* Make the link fill the entire button */
-        width: 100%;
-        height: 100%;
-        line-height: 2.6em; /* Align text vertically */
-        text-align: center;
-    }
-
-    #getmod:hover {
-        background-color: yellow;
-        border: 3px solid black;
-    }
-
-        #getmod:hover a {
-            color: black;
-        }
-
-#about {
-    font-size: 2.5rem;
-    text-shadow: 10px 10px 20px black;
-    margin: 20px 0;
-    text-decoration: underline yellow;
-    text-underline-offset: -10px;
-}
-
-#aboutdesc {
-    font-size: 1rem;
-    color: rgb(200, 200, 200);
-    margin: 10px 0;
-    max-width: 300px;
-}
-
-/* Footer */
+/* Footer styles */
 footer {
     background-color: black;
     height: 45px;
@@ -149,45 +68,168 @@ footer {
 }
 
     footer h1 {
-        font-size: 13pt;
+        color: white;
+        font-size: 13px;
+        font-family: "Aldrich", sans-serif;
     }
-
-/* Images */
-.secondpic, .firstpic {
+/* Main content styling */
+.firstpic, .secondpic {
+    position: relative;
     width: 100%;
-    height: auto;
-    background-size: cover;
-    background-position: center;
-    margin-right: 0px;
+    height: 80vh; /* Make the image container take up 80% of the viewport height */
+    background-size: cover; /* Ensure the image fills the container */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat;
+    font-family: "Aldrich", sans-serif;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    #title, #jka, #about {
+.firstpic {
+    background-image: url('https://i.imgur.com/uT7e0st.jpeg');
+}
+
+.secondpic {
+    background-image: url('https://i.imgur.com/SgLLBau.jpeg');
+}
+
+#contentfirstpic {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+#title {
+    font-size: 4rem;
+    font-weight: bold;
+    text-decoration: underline yellow;
+    text-underline-offset: -70px;
+}
+
+#jka {
+    font-size: 1.5rem;
+    color: grey;
+    margin-top: -30px;
+}
+
+#getmod a {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    background-color: #f2ae09;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    top: 300px;
+}
+
+    #getmod a:hover {
+        background-color: #e59407;
+    }
+
+#about {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#aboutdesc {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#iconic {
+    font-weight: bold;
+    color: yellow;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 1081px) {
+    .firstpic, .secondpic {
+        height: 60vh; /* Smaller image height on medium screens */
+    }
+
+    #title {
         font-size: 2rem;
+        margin-left: 15%;
+        text-underline-offset: -32px;
     }
 
+    #jka {
+        font-size: 1.5rem;
+        margin-left: 15%;
+    }
+
+    #about {
+        font-size: 1.5rem;
+    }
+
+    #aboutdesc {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
     nav a {
-        font-size: 14pt;
+        font-size: 0.9rem;
+        padding: 0 2vw;
     }
 
-    #getmod {
-        width: 12em;
-        height: 2.4em;
+    .firstpic, .secondpic {
+        height: 50vh;
+    }
+
+    #title {
+        font-size: 1.3rem;
+        text-underline-offset: -17px;
+        margin-right: -10%;
+    }
+
+    #jka {
+        font-size: 1rem;
+        margin-top: -2%;
+        margin-left: 30%;
+    }
+    #getmod a{
+        font-size: 1rem;
+    }
+
+    #about {
+        font-size: 1.2rem;
+    }
+
+    #aboutdesc {
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
-    #title, #jka, #about {
-        font-size: 1.5rem;
-    }
-
     nav a {
-        font-size: 12pt;
+        font-size: 0.8rem;
+        padding: 0 2vw;
     }
 
-    #getmod {
-        width: 10em;
-        height: 2.2em;
+    .firstpic, .secondpic {
+        height: 40vh;
+    }
+
+    #title {
+        font-size: 1rem;
+    }
+
+    #jka {
+        font-size: 0.9rem;
+    }
+
+    #about {
+        font-size: 1rem;
+    }
+
+    #aboutdesc {
+        font-size: 0.8rem;
     }
 }

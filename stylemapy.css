@@ -83,7 +83,6 @@ footer {
     color: white;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: pink;
 }
 
     .map h1 {
@@ -134,7 +133,6 @@ body {
     }
     .map{
         padding-left: 50px;
-        color: blue;
     }
 
     .map h1 {
@@ -184,7 +182,6 @@ body {
     }
     .map{
         padding-left: 100px;
-        color: red;
     }
 }
 
@@ -217,6 +214,5 @@ body {
     }
     .map{
         padding-left: 0;
-        color: yellow;
     }
 }
