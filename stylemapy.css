@@ -1,0 +1,174 @@
+/* Reset margins for header, nav, main, footer */
+header, nav, main, footer {
+    margin: 0;
+}
+
+/* Header styles */
+header {
+    background-color: black;
+    margin: 0;
+    height: 50px;
+    font-family: 'fight';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#headertitle {
+    color: white;
+    font-size: 26pt;
+    text-align: center;
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+    #headertitle:hover {
+        color: yellow;
+        transition-duration: 1.8s;
+    }
+
+/* Navigation styles */
+nav {
+    background-color: black;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    nav a {
+        display: inline;
+        padding: 0px 30px 0px;
+        font-family: "Aldrich", sans-serif;
+        color: white;
+        text-decoration: none;
+        font-size: 16pt;
+    }
+
+        nav a:hover {
+            color: #f2ae09;
+            opacity: 1;
+            text-shadow: 1px 1px 17px #f2ae09b0;
+        }
+
+/* Footer styles */
+footer {
+    background-color: black;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    footer h1 {
+        color: white;
+        font-size: 13px;
+        font-family: "Aldrich", sans-serif;
+    }
+
+/* Container for teams */
+#redteam, #blueteam {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between items */
+    padding: 20px; /* Adds padding for better responsiveness */
+}
+
+#rebelove, #imperium {
+    font-family: "Aldrich", sans-serif;
+    color: white;
+    font-size: 3rem;
+    text-shadow: 10px 10px 20px black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Individual item styles */
+.classreb, .classimp {
+    border-radius: 12px;
+    box-shadow: inset 0 0 0 2px #5c5c5c;
+    max-width: 300px; /* Ensures better responsiveness */
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 0;
+    flex: 1 1 calc(33.333% - 40px); /* 3 items per row */
+    box-sizing: border-box; /* Includes padding in width/height */
+    text-align: center; /* Center content including images */
+}
+
+    .classreb img, .classimp img {
+        margin: -20px 0px 0px 110px;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain; /* Ensures images maintain aspect ratio */
+    }
+
+/* Styles for standalone images */
+img.empire, img.rebels {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* Text styles */
+.classreb h3, .classimp h3 {
+    color: white;
+    font-family: "Aldrich", sans-serif;
+    text-shadow: 2px 2px 2px red;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.classreb p, .classimp p {
+    color: white;
+    font-family: Consolas, monospace;
+    font-size: 1rem;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Responsive tweaks */
+body {
+    overflow-x: hidden;
+    background-color: black;
+}
+
+@media (max-width: 768px) {
+    #rebelove, #imperium {
+        font-size: 2rem;
+    }
+
+    .classreb, .classimp {
+        flex: 1 1 calc(50% - 20px); /* 2 items per row */
+    }
+
+    img.empire, img.rebels {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .classreb, .classimp {
+        flex: 1 1 100%; /* 1 item per row */
+    }
+
+    #rebelove, #imperium {
+        font-size: 1.5rem;
+    }
+
+    img.empire, img.rebels {
+        max-width: 100%;
+    }
+}
