@@ -103,8 +103,8 @@ footer {
 #contentsecondpic {
     position: absolute;
     top: 10%;
-    left: 80%;
-    transform: translate(-80%, -10%);
+    left: 60%;
+    width: 25%;
     text-align: center;
 }
 #about {
@@ -193,7 +193,6 @@ footer {
         padding: 6% 18%;
     }
     #about{
-        width: 125%;
         font-size: 36pt;
     }
     #aboutdesc{
