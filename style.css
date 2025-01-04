@@ -48,7 +48,7 @@ nav {
     nav a {
         padding: 0 30px;
         font-family: "Aldrich", sans-serif;
-        color: white;
+        color: purple;
         text-decoration: none; /* Ensures no underline on links */
         font-size: 16pt;
     }
