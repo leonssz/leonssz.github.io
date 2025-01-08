@@ -8,11 +8,12 @@
 header, nav, main, footer {
     margin: 0;
 }
-body{
-    margin-left: 0px;
-    background-color: black;
-}
 
+body {
+    margin: 0;
+    background-color: black;
+    font-family: 'Aldrich', sans-serif;
+}
 
 header {
     background-color: black;
@@ -36,7 +37,6 @@ header {
         transition-duration: 1.8s;
     }
 
-
 nav {
     background-color: black;
     height: 50px;
@@ -48,8 +48,7 @@ nav {
     nav a {
         padding: 0 30px;
         color: white;
-        font-family: "Aldrich", sans-serif;
-        text-decoration: none; 
+        text-decoration: none;
         font-size: 16pt;
     }
 
@@ -57,7 +56,6 @@ nav {
             color: #f2ae09;
             text-shadow: 2px 4px 10px #f2ae09b0;
         }
-
 
 footer {
     background-color: black;
@@ -69,10 +67,9 @@ footer {
 
     footer h1 {
         color: white;
-        font-size: 13px;
+        font-size: 12px;
         font-family: "Aldrich", sans-serif;
     }
-
 
 #firstpic, #secondpic {
     position: relative;
@@ -80,8 +77,8 @@ footer {
     height: 70vh;
     background-size: cover;
     background-position: center;
-    font-family: "Aldrich", sans-serif;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     margin-top: 20px;
 }
 
@@ -99,28 +96,33 @@ footer {
     left: 50%;
     transform: translate(-50%, -10%);
     text-align: center;
+    color: white;
+    font-family: 'Aldrich', sans-serif;
 }
+
 #contentsecondpic {
     position: relative;
     top: 10%;
-    left: 60%;
+    left: 50%;
     transform: translate(-50%, -10%);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    max-width: 100%;
-    text-align: left;
+    align-items: center;
+    max-width: 90%;
+    text-align: center;
+    color: white;
+    font-family: 'Aldrich', sans-serif;
     padding: 1em;
     box-sizing: border-box;
 }
 
 #about {
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
     color: white;
     font-weight: bold;
     text-decoration: underline yellow;
     text-underline-offset: 0.2em;
-    margin: 0;
+    margin: 1em 0;
     text-align: center;
 }
 
@@ -134,7 +136,8 @@ footer {
     word-wrap: break-word;
     font-family: 'Franklin Gothic Book';
 }
-#iconic{
+
+#iconic {
     color: yellow;
 }
 
@@ -168,27 +171,17 @@ footer {
         background-color: yellow;
     }
 
-
-footer {
-    background-color: black;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-    footer h1 {
-        font-size: 12px;
-        font-family: "Aldrich", sans-serif;
-    }
-
-
 @media (max-width: 1080px) {
-    nav a{
+    nav a {
         font-size: 18pt;
     }
+
     #firstpic, #secondpic {
         height: 60vh;
+    }
+
+    #contentsecondpic {
+        top: 8%;
     }
 
     #title {
@@ -205,10 +198,12 @@ footer {
         font-size: 16px;
         padding: 6% 18%;
     }
-    #about{
+
+    #about {
         font-size: 36pt;
     }
-    #aboutdesc{
+
+    #aboutdesc {
         font-size: 15pt;
     }
 }
@@ -223,29 +218,14 @@ footer {
         height: 50vh;
     }
 
-    #title {
-        font-size: 24px;
-    }
-
-    #jka {
-        font-size: 14px;
-        margin-top: 0px;
-    }
-
-    #getmod a {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
     #contentsecondpic {
         top: 5%;
-        left: 50%;
         transform: translate(-50%, -5%);
         padding: 0.8em;
     }
 
     #about {
         font-size: 2rem;
-        text-align: center;
     }
 
     #aboutdesc {
@@ -263,22 +243,7 @@ footer {
         height: 40vh;
     }
 
-    #title {
-        font-size: 20px;
-    }
-
-    #jka {
-        font-size: 12px;
-    }
-
-    #getmod a {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
     #contentsecondpic {
-        top: 5%;
-        left: 50%;
-        transform: translate(-50%, -5%);
         padding: 0.5em;
     }
 
