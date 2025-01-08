@@ -4,7 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
-/* Reset margins for header, nav, main, footer */
+
 header, nav, main, footer {
     margin: 0;
 }
@@ -13,7 +13,7 @@ body{
     background-color: black;
 }
 
-/* Header styles */
+
 header {
     background-color: black;
     height: 50px;
@@ -36,7 +36,7 @@ header {
         transition-duration: 1.8s;
     }
 
-/* Navigation styles */
+
 nav {
     background-color: black;
     height: 50px;
@@ -49,7 +49,7 @@ nav {
         padding: 0 30px;
         color: white;
         font-family: "Aldrich", sans-serif;
-        text-decoration: none; /* Ensures no underline on links */
+        text-decoration: none; 
         font-size: 16pt;
     }
 
@@ -58,7 +58,7 @@ nav {
             text-shadow: 2px 4px 10px #f2ae09b0;
         }
 
-/* Footer styles */
+
 footer {
     background-color: black;
     height: 45px;
@@ -73,8 +73,8 @@ footer {
         font-family: "Aldrich", sans-serif;
     }
 
-/* Main content styling */
-.firstpic, .secondpic {
+
+#firstpic, #secondpic {
     position: relative;
     width: 100%;
     height: 70vh;
@@ -85,11 +85,11 @@ footer {
     margin-top: 20px;
 }
 
-.firstpic {
+#firstpic {
     background-image: url('https://i.imgur.com/uT7e0st.jpeg');
 }
 
-.secondpic {
+#secondpic {
     background-image: url('https://i.imgur.com/SgLLBau.jpeg');
 }
 
@@ -101,25 +101,38 @@ footer {
     text-align: center;
 }
 #contentsecondpic {
-    position: absolute;
+    position: relative;
     top: 10%;
     left: 60%;
-    width: 25%;
-    text-align: center;
+    transform: translate(-50%, -10%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+    text-align: left;
+    padding: 1em;
+    box-sizing: border-box;
 }
+
 #about {
-    font-size: 48px;
+    font-size: 2.5rem; 
     color: white;
     font-weight: bold;
     text-decoration: underline yellow;
-    text-underline-offset: -100%;
-    margin-left: 40%;
+    text-underline-offset: 0.2em;
+    margin: 0;
+    text-align: center;
 }
+
 #aboutdesc {
-    font-size: 18px;
+    font-size: 1.2rem;
     color: white;
-    width: 150%;
+    max-width: 100%;
     text-align: left;
+    margin-top: 1em;
+    line-height: 1.5;
+    word-wrap: break-word;
+    font-family: 'Franklin Gothic Book';
 }
 #iconic{
     color: yellow;
@@ -155,7 +168,7 @@ footer {
         background-color: yellow;
     }
 
-/* Footer styles */
+
 footer {
     background-color: black;
     height: 45px;
@@ -169,12 +182,12 @@ footer {
         font-family: "Aldrich", sans-serif;
     }
 
-/* Responsive Design */
+
 @media (max-width: 1080px) {
     nav a{
         font-size: 18pt;
     }
-    .firstpic, .secondpic {
+    #firstpic, #secondpic {
         height: 60vh;
     }
 
@@ -206,7 +219,7 @@ footer {
         padding: 0 15px;
     }
 
-    .firstpic, .secondpic {
+    #firstpic, #secondpic {
         height: 50vh;
     }
 
@@ -223,6 +236,21 @@ footer {
         font-size: 14px;
         padding: 8px 12px;
     }
+    #contentsecondpic {
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -5%);
+        padding: 0.8em;
+    }
+
+    #about {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #aboutdesc {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -231,7 +259,7 @@ footer {
         padding: 0 10px;
     }
 
-    .firstpic, .secondpic {
+    #firstpic, #secondpic {
         height: 40vh;
     }
 
@@ -246,5 +274,19 @@ footer {
     #getmod a {
         font-size: 12px;
         padding: 6px 10px;
+    }
+    #contentsecondpic {
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -5%);
+        padding: 0.5em;
+    }
+
+    #about {
+        font-size: 1.5rem;
+    }
+
+    #aboutdesc {
+        font-size: 0.8rem;
     }
 }
